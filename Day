@@ -1,0 +1,43 @@
+using System;
+
+namespace _1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            int Day = Convert.ToInt32(Console.ReadLine());
+            string Day;
+            switch (Day)
+            {
+                case 1:
+                    Day = "Понедельник";
+                    break;
+                case 2:
+                    Day = "Вторник";
+                    break;
+                case 3:
+                    Day = "Среда";
+                    break;
+                case 4:
+                    Day = "Четверг";
+                    break;
+                case 5:
+                    Day = "Пятница";
+                    break;
+                case 6:
+                    Day = "Суббота";
+                    break;
+                case 7:
+                    Day = "Воскресенье";
+                    break;
+                default:
+                    Day = "Ошибка: " + Day + "такого дня не существует";
+                    break;
+            }
+            Console.WriteLine(Day);
+            Console.ReadLine();
+        }
+    }
+}
