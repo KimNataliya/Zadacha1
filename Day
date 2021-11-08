@@ -8,36 +8,24 @@ namespace _1
         {
             Console.WriteLine("Введите число");
             int Day = Convert.ToInt32(Console.ReadLine());
-            string Day;
-            switch (Day)
             {
-                case 1:
-                    Day = "Понедельник";
-                    break;
-                case 2:
-                    Day = "Вторник";
-                    break;
-                case 3:
-                    Day = "Среда";
-                    break;
-                case 4:
-                    Day = "Четверг";
-                    break;
-                case 5:
-                    Day = "Пятница";
-                    break;
-                case 6:
-                    Day = "Суббота";
-                    break;
-                case 7:
-                    Day = "Воскресенье";
-                    break;
-                default:
-                    Day = "Ошибка: " + Day + "такого дня не существует";
-                    break;
+                if (Day == 1)
+                    Console.WriteLine("Понедельник");
+                else if (Day == 2)
+                    Console.WriteLine("Вторник");
+                else if (Day == 3)
+                    Console.WriteLine("Среда");
+                else if (Day == 4)
+                    Console.WriteLine("Четверг");
+                else if (Day == 5)
+                    Console.WriteLine("Пятница");
+                else if (Day == 6)
+                    Console.WriteLine("Суббота");
+                else if (Day == 7)
+                    Console.WriteLine("Воскресенье");
+                else Console.WriteLine("Нет такого дня недели");
             }
-            Console.WriteLine(Day);
-            Console.ReadLine();
         }
     }
 }
+
