@@ -1,0 +1,47 @@
+//Дан массив целых чисел. Переписать все положительные элементы во второй массив, а остальные - в третий.
+using System;
+
+namespace 13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int[n];
+            int[] array1 = new int[n];
+            int[] array2 = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            int i_array1 = 0;
+            int i_array2 = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (array[i] >= 0)
+                {
+                    array1[i_array1] = array[i];
+                    i_array1++;
+                }
+                else
+                {
+                    array2[i_array2] = array[i];
+                    i_array2++;
+                }
+            }
+            Console.Write("Массив 2:");
+            for (int i = 0; i <= i_array1-1; i++)
+            {
+                Console.Write(array1[i] + " ");
+            }
+            Console.Write("Массив 3: ");
+            for (int i = 0; i <= i_array2-1; i++)
+            {
+                Console.Write(array2[i] + " ");
+            }
+        }
+    }
+}
