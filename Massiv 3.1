@@ -1,0 +1,32 @@
+//В одномерном числовом массиве D длиной n вычислить сумму элементов с нечетными индексами. Вывести на экран массив D, полученную сумму.
+using System;
+
+namespace _14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var n = Convert.ToInt32(Console.ReadLine());
+            var D = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+
+            Console.WriteLine("Массив: ");
+            for (int i = 0; i < D.Length; i++)
+            {
+                Console.Write(D[i] + " ");
+            }
+
+            int sum = 0;
+            for (int i = 0; i < n - 1; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    sum += D[i];
+                }
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Сумма нечетных индексов: " + sum);
+        }
+    }
+    
+}
