@@ -11,14 +11,16 @@ namespace _12
             var array = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
 
             int min = array[0];
+            var a = 0;
             for (int i = 1; i < array.Length; i++)
             {
                 if (min > array[i])
                 {
                     min = array[i];
+                    a = i;
                 }
             }
-            Console.WriteLine($"Минимальное число: {min}");
+            Console.WriteLine($"Минимальный индекс: {a}");
             
         }
     }
